@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/alex/Python/Fiverr/mccreeryd/chatbot/src/chatbot/../../Data/model.tfl"
+all_model_checkpoint_paths: "/home/alex/Python/Fiverr/mccreeryd/chatbot/src/chatbot/../../Data/model.tfl"
