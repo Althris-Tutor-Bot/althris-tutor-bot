@@ -23,7 +23,6 @@ if __name__ == '__main__':
             exit(0)  # Terminates the program.
         else:
             response = requests.get(
-                "https://p46vbj47a8.execute-api.eu-west-3.amazonaws.com/default/chatbot-lambda",
-                params={"question": message}
-            ).json()["body"]
+                f"http://54.78.114.97:5000/{message}",
+            ).json()["data"]
             print(response)  # This message is outputted to the screen.

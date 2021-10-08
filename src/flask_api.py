@@ -10,7 +10,8 @@ cb = Chatbot()
 
 
 class API(Resource):
-    def get(self, question):
+    @staticmethod
+    def get(question):
         return {"data": cb.get_response(question)}
 
 
