@@ -6,6 +6,7 @@ import json
 app = Flask(__name__)
 api = Api(app)
 
+
 class API(Resource):
     @staticmethod
     def get():
