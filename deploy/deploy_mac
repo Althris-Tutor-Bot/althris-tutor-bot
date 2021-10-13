@@ -14,6 +14,6 @@ sudo ssh -i ~/Downloads/althris.pem ubuntu@ec2-54-78-114-97.eu-west-1.compute.am
   source env/bin/activate
   env/bin/python3 -m pip install -r requirements.txt
   pm2 start src/flask_api.py --interpreter env/bin/python3
-  pm2 start src/analytics_api.py --interpreter env/bin/python3
+  pm2 start analytics/analytics_api.py --interpreter env/bin/python3
   pm2 save
 EOF
