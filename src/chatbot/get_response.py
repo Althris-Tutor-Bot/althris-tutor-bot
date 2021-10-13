@@ -30,7 +30,6 @@ def get_response(self, question):
                     try:
                         data = json.load(f)
                     except Exception as _:
-                        print(_)
                         data = {
                             "questionable": []
                         }
