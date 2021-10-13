@@ -18,5 +18,5 @@ class API(Resource):
 api.add_resource(API, "/<string:question>")
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port="3996")
+    app.run(host='0.0.0.0', port=3996)
 
