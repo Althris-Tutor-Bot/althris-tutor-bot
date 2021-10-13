@@ -6,7 +6,7 @@ git push
 
 sudo ssh -i ~/Downloads/althris.pem ubuntu@ec2-54-78-114-97.eu-west-1.compute.amazonaws.com << EOF
   sudo su
-  cd /var/www/54.78.114.97/public_html/althris_tutor_bot/
+  cd /var/www/54.78.114.97/public_html/althris-tutor-bot/
   pm2 stop flask_api
   pm2 stop analytics_api
 
