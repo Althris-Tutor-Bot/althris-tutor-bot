@@ -3,10 +3,12 @@ from chatbot import Chatbot
 from flask import Flask
 from flask_restful import Api, Resource
 
+from src.chatbot import Chatbot
+
 app = Flask(__name__)
 api = Api(app)
 
-cb = Chatbot()
+cb: Chatbot = Chatbot()
 
 
 class API(Resource):
