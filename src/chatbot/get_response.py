@@ -1,5 +1,7 @@
 import numpy as np
 import random
+import os
+import json
 
 
 def get_response(self, question):
@@ -15,5 +17,32 @@ def get_response(self, question):
                 responses = pattern['response']
             else:
                 responses = ["Sorry I did not quite understand that. Please try again!"]
+                if not os.path.isdir(os.path.join(os.path.dirname(__file__), "..", "..", "analytics")):
+                    os.mkdir(os.path.join(os.path.dirname(__file__), "..", "..", "analytics"))
+
+                if not os.path.isfile(os.path.join(os.path.dirname(__file__),
+                                                   "..", "..", "analytics", "questionable.json")):
+                    with open(os.path.join(os.path.dirname(__file__),
+                                           "..", "..", "analytics", "questionable.json"), "w+") as _:
+                        pass
+
+                with open(os.path.join(os.path.dirname(__file__), "..", "..", "analytics", "questionable.json")) as f:
+                    try:
+                        data = json.load(f)
+                    except Exception as _:
+                        print(_)
+                        data = {
+                            "questionable": []
+                        }
+
+                    data["questionable"].append({
+                        "question": question,
+                        "response": pattern['response'],
+                        "confidence": str(round(predicted_results[0, result_index] * 100, 2)) + "%"
+                    })
+
+                with open(os.path.join(os.path.dirname(__file__), "..", "..",
+                                       "analytics", "questionable.json"), "w+") as f:
+                    json.dump(data, f, indent=4)
 
     return random.choice(responses)
