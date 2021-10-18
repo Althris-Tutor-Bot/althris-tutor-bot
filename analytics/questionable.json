@@ -1,0 +1,46 @@
+{
+    "questionable": [
+        {
+            "question": "low risk",
+            "response": [
+                "Standard Changes "
+            ],
+            "confidence": "28.4%"
+        },
+        {
+            "question": "",
+            "response": [
+                "Change Control is the equivalent word to Change enablement"
+            ],
+            "confidence": "12.87%"
+        },
+        {
+            "question": "",
+            "response": [
+                "Change Control is the equivalent word to Change enablement"
+            ],
+            "confidence": "12.87%"
+        },
+        {
+            "question": "?",
+            "response": [
+                "Change Control is the equivalent word to Change enablement"
+            ],
+            "confidence": "12.87%"
+        },
+        {
+            "question": "hello",
+            "response": [
+                "Change Control is the equivalent word to Change enablement"
+            ],
+            "confidence": "12.87%"
+        },
+        {
+            "question": "ok di we now need to run the deploy ",
+            "response": [
+                "Each organization will define what how change enablement and control will be applied"
+            ],
+            "confidence": "29.93%"
+        }
+    ]
+}
